@@ -1,1 +1,37 @@
-<p>table works!</p>
+
+<table id="customers" style="margin: 25px;">
+  <thead>
+    <tr>
+    <th></th>
+      <th class="border-left border-top">Booked Start Date</th>
+      <th class="border-top">Booked End Date</th>
+      <th class="border-top">No Of Seats</th>
+      <th class="border-top">Fee Paid</th>
+      <th class="border-top">Booked By</th>
+      <th class="border-top border-right">Booked Date</th>
+    </tr>
+  </thead>
+  <tbody class="border-right">
+    <tr *ngFor="let data of ReportData let i = index;">
+    <td *ngIf="i === 0" class="table-label" [attr.rowspan]="ReportData.length">Swimming Pool</td>
+      <td [class.border-bottom] = "i === ReportData.length - 1">
+        {{ getDate(data.BookingStartDate) }}
+      </td>
+      <td [class.border-bottom] = "i === ReportData.length - 1">
+        {{ getDate(data.BookingEndDate) }}
+      </td>
+      <td [class.border-bottom] = "i === ReportData.length - 1">
+        {{ data.NoOfSeat }}
+      </td>
+      <td [class.border-bottom] = "i === ReportData.length - 1">
+        {{ data.FeePaid }}
+      </td>
+      <td [class.border-bottom] = "i === ReportData.length - 1">
+        {{ data.BookedBy }}
+      </td>
+      <td [class.border-bottom] = "i === ReportData.length - 1">
+        {{ getDate(data.BookedDate) }}
+      </td>
+    </tr>
+  </tbody>
+</table>

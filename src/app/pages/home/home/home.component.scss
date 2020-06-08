@@ -1,1 +1,43 @@
-// CSS
+table {
+  width: 40%;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+  border: 0;
+}
+
+th.mat-header-cell:first-of-type,
+td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type {
+  padding: 0px;
+}
+
+th.mat-header-cell:last-of-type,
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type {
+  padding-right: 0px;
+}
+
+.table-title {
+  width: 25%;
+}
+
+.border-left {
+  border-left: 1px solid blue;
+}
+
+.border-right {
+  border-right: 1px solid blue;
+}
+.border-top {
+  border-top: 1px solid blue;
+}
+.border-bottom {
+  border-bottom: 1px solid blue;
+}
